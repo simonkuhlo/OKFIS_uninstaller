@@ -16,7 +16,7 @@ def on_message(message:str):
 
 com.register_listener(GuiListener())
 
-root = ThemedTk(theme="breeze")
+root = ThemedTk(theme="kroc")
 root.title("OK.FIS Deinstallierer")
 style = ttk.Style(root)
 background_color = style.lookup("TLabel", "background")
@@ -41,9 +41,9 @@ uninstall_odb_driver = tk.IntVar()
 
 ttk.Checkbutton(root, text="ODBC Treiber deinstallieren (funktioniert noch nicht)", variable=uninstall_odb_driver).pack(anchor=tk.W, pady=5)
 
-ttk.Button(root, text="Deinstallieren", command=api.uninstall_app).pack(pady=5)
-ttk.Button(root, text="Schließen", command=root.quit).pack(pady=5)
+ttk.Button(root, text="Deinstallieren", command=api.uninstall_app).pack(side="right", pady=5, padx=5)
+ttk.Button(root, text="Schließen", command=root.quit).pack(side="right", pady=5, padx=5)
 
 if __name__ == "__main__":
-    api.run_as_admin()
+    #api.run_as_admin()
     root.mainloop()
