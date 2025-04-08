@@ -45,5 +45,5 @@ ttk.Button(root, text="Deinstallieren", command=api.uninstall_app).pack(pady=5)
 ttk.Button(root, text="Schließen", command=root.quit).pack(pady=5)
 
 if __name__ == "__main__":
-    #api.run_as_admin()
+    api.run_as_admin()
     root.mainloop()
